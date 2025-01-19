@@ -6,7 +6,7 @@ export default function HeroSection() {
   const navigation = useRouter();
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-black text-white overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center bg-black text-white overflow-hidden ">
       <WavePattern />
       <div className="container mx-auto px-4 py-32 relative z-10">
         <div className="max-w-3xl mx-auto text-center">
