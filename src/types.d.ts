@@ -1,5 +1,5 @@
 
 interface NavLinksType {
     text?: string;
-    onclick?: (event: React.<>) => void;
+    onclick?: (event: React.MouseEvent<HTMLAnchorElement | HTMLButtonElement>) => void;
 }

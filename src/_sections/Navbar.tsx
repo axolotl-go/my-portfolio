@@ -8,6 +8,11 @@ import { useState } from "react";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const toggleOpen = () => {
+    setIsOpen(!isOpen);
+    document.body.style.overflow = isOpen ? "auto" : "hidden";
+  }
+
   return (
     <nav className="bg-black/95 border-b border-red-600 fixed top-0 left-0 right-0 z-50">
       <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
@@ -18,7 +23,7 @@ export default function Navbar() {
 
         {/* Hamburger Menu Button */}
         <button
-          onClick={() => setIsOpen((prev) => !prev)}
+          onClick={() => toggleOpen()}
           aria-expanded={isOpen}
           aria-label="Toggle navigation menu"
           className="md:hidden z-30 p-2 w-10 h-10 text-red-600"
@@ -42,19 +47,22 @@ export default function Navbar() {
           isOpen ? "translate-x-0" : "translate-x-full"
         } md:hidden`}
       >
-        <NavLinks onclick={() => setIsOpen(!isOpen)} text="white" />
+        <NavLinks onclick={toggleOpen} text="white" />
+
       </div>
     </nav>
   );
 }
 
-function NavLinks({ text, onclick } : NavLinksType ) {
+
+const NavLinks = ({ text, onclick } : NavLinksType ) => {
   const links = [
     { label: "Sobre mí", href: "#sobre-mi" },
     { label: "Proyectos", href: "#proyectos" },
     { label: "Tecnologías", href: "#tecnologias" },
     { label: "Precios", href: "#precios" },
     { label: "Contacto", href: "#contacto" },
+    { label: "CV", href: "/cv.pdf" },
   ];
 
   return (

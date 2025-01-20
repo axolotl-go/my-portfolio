@@ -1,31 +1,35 @@
+
 // import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 // import { Github, ExternalLink } from 'lucide-react'
 
 import { FaGithub } from "react-icons/fa"
 import { FiExternalLink } from "react-icons/fi"
 
+
+
+
 export function ProjectsSection() {
   const projects = [
     {
-      title: "Project Neo",
-      description: "Aplicación web fullstack con diseño cyberpunk",
-      image: "https://kzmoqivoq162002c3lti.lite.vusercontent.net/placeholder.svg?height=200&width=300",
+      title: "FreedevTube",
+      description: "Plataforma de cursos gratis impartidos por creadores de contenido sobre desarrollo de software, diseño, ciberseguridad y más.",
+      image: "/FreeDevTube.png",
       tech: ["Next.js", "TypeScript", "Tailwind"],
-      github: "#",
-      live: "#"
+      github: "https://github.com/dantech99/FreedevTube",
+      live: "https://www.freedeves.tech/"
     },
     {
-      title: "Retro Chat",
-      description: "Chat en tiempo real con estética retro",
-      image: "https://kzmoqivoq162002c3lti.lite.vusercontent.net/placeholder.svg?height=200&width=300",
+      title: "RecyclingBikes",
+      description: "Recycling Bikes es una plataforma para comprar y vender bicicletas, con más de 12,000 opciones. Ofrecen atención personalizada, pagos seguros y flexibles, y se enfocan en la transparencia y seguridad. ",
+      image: "/RecyclingBikes.png",
       tech: ["React", "Firebase", "CSS"],
-      github: "#",
-      live: "#"
+      github: "https://github.com/Recycling-Bikes/recycling-web",
+      live: "https://www.recyclingbikes.co/"
     },
     {
-      title: "Pixel Art Maker",
-      description: "Herramienta de creación de pixel art",
-      image: "https://kzmoqivoq162002c3lti.lite.vusercontent.net/placeholder.svg?height=200&width=300",
+      title: "Recipes Go",
+      description: "Recipes Go es una aplicación diseñada para hacer que la cocina sea accesible y emocionante. Ofrece una amplia variedad de recetas, desde tradicionales hasta innovadoras, con instrucciones claras, videos tutoriales y consejos prácticos. ",
+      image: "/recipesGo.png",
       tech: ["JavaScript", "Canvas", "WebGL"],
       github: "#",
       live: "#"
@@ -42,12 +46,13 @@ export function ProjectsSection() {
       {projects.map((project) => (
         <div
           key={project.title}
-          className="bg-black border border-red-600/50 text-white p-4 rounded-lg"
+          className="bg-black border border-red-600 text-white p-4 rounded-lg"
         >
           <div className="relative aspect-video mb-4 overflow-hidden rounded-lg">
             <img
               src={project.image}
               alt={project.title}
+              
               className="object-cover transition-transform hover:scale-110"
             />
           </div>

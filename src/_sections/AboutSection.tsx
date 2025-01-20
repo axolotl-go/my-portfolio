@@ -22,7 +22,7 @@ export function AboutSection() {
                   className="object-cover w-full h-full mix-blend-"
                 />
               </div>
-              <div className="absolute -bottom-6 -right-2 bg-red-600 text-white p-4 rounded-lg">
+              <div className="absolute -bottom-6 -right-2 border border-red-600 bg-black text-white p-4 rounded-lg">
                 <p className="text-4xl font-bold">3+</p>
                 <p className="text-sm">años de experiencia</p>
               </div>
