@@ -1,10 +1,8 @@
-"use client"
-import { useRouter } from "next/navigation";
+"use client";
 import WavePattern from "./WavePattern";
+import { Button } from "@/components/Button";
 
 export default function HeroSection() {
-  const navigation = useRouter();
-
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-black text-white overflow-hidden ">
       <WavePattern />
@@ -17,16 +15,14 @@ export default function HeroSection() {
             デベロッパー • クリエイター • イノベーター
           </p>
           <div className="space-x-4">
-              <button onClick={() => navigation.push("/#proyectos") } className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg">
+            <Button link="#proyectos">
               Ver Proyectos
-            </button>
-            <button onClick={() => navigation.push("/#contacto")} className="border-red-600 text-red-600 hover:bg-red-600/10 px-8 py-3 rounded-lg">
-              Contactar
-            </button>
+            </Button>
+
+            <Button link="#contacto">Contact</Button>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }
-

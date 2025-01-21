@@ -1,4 +1,5 @@
-import { BiCheck } from "react-icons/bi"
+import { Button } from "@/components/Button";
+import { BiCheck } from "react-icons/bi";
 
 export function PricingSection() {
   const plans = [
@@ -9,8 +10,8 @@ export function PricingSection() {
         "Diseño Responsive",
         "3 Páginas",
         "SEO Básico",
-        "1 Mes de Soporte"
-      ]
+        "1 Mes de Soporte",
+      ],
     },
     {
       name: "Profesional",
@@ -21,8 +22,8 @@ export function PricingSection() {
         "SEO Avanzado",
         "3 Meses de Soporte",
         "Panel de Administración",
-        "Análisis de Datos"
-      ]
+        "Análisis de Datos",
+      ],
     },
     {
       name: "Empresarial",
@@ -34,10 +35,10 @@ export function PricingSection() {
         "6 Meses de Soporte",
         "Panel de Administración",
         "Análisis Avanzado",
-        "API Personalizada"
-      ]
-    }
-  ]
+        "API Personalizada",
+      ],
+    },
+  ];
 
   return (
     <section id="precios" className="relative bg-black/95 text-white py-24">
@@ -53,7 +54,9 @@ export function PricingSection() {
             >
               <h3 className="text-xl font-bold mb-2">{plan.name}</h3>
               <div className="mb-6">
-                <span className="text-4xl font-bold text-red-600">${plan.price}</span>
+                <span className="text-4xl font-bold text-red-600">
+                  ${plan.price}
+                </span>
                 <span className="text-gray-400">/proyecto</span>
               </div>
               <ul className="space-y-4">
@@ -64,14 +67,11 @@ export function PricingSection() {
                   </li>
                 ))}
               </ul>
-              <button className="w-full mt-6 bg-red-600 hover:bg-red-700">
-                Seleccionar Plan
-              </button>
+              <Button as="fullPrimary">Seleccionar Plan</Button>
             </div>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }
-
