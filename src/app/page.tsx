@@ -5,7 +5,6 @@ import Navbar from "@/_sections/Navbar";
 import { PricingSection } from "@/_sections/PricingSection";
 import { ProjectsSection } from "@/_sections/ProjectsSection";
 import { TechnologiesSection } from "@/_sections/TechnologiesSection";
-
 export default function Home() {
   return (
     <main className="bg-black min-h-screen">
@@ -13,7 +12,7 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <ProjectsSection />
-        <TechnologiesSection />
+        <TechnologiesSection /> 
         <PricingSection />
         <ContactSection />
     </main>

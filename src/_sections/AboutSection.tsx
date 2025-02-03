@@ -1,14 +1,13 @@
-import Image from "next/image";
+// import Image from "next/image";
 import Me from "../../public/Me.jpg";
+
+import Section from "@/components/Section";
+import Image from "next/image";
 
 export function AboutSection() {
     return (
-      <section id="sobre-mi" className="relative bg-black text-white py-24  container mx-auto px-4">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-bold mb-12 text-center">
-            私について <span className="text-red-600">/ Sobre Mí</span>
-          </h2>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+      <Section title="Sobre Mí" titleJapanese="私について" contact="sobre-mi" >
+        <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
               <p className="text-lg text-gray-300">
               Soy Javier, desarrollador full-stack con experiencia en Go, JavaScript, TypeScript y C#. Me especializo en crear aplicaciones escalables y funcionales, abarcando desde el backend hasta el frontend. Estoy comprometido con la mejora continua y el aprendizaje de nuevas tecnologías para aportar soluciones innovadoras y de alto impacto.
@@ -28,8 +27,7 @@ export function AboutSection() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+      </Section>
     )
   }
   

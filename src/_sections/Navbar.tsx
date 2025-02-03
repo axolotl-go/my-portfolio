@@ -17,8 +17,11 @@ export default function Navbar() {
     <nav className="bg-black/95 border-b border-red-600 fixed top-0 left-0 right-0 z-50">
       <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
         {/* Logo */}
-        <span className="text-2xl font-bold z-30 text-red-600 tracking-wider">
+        {/* <span className="text-2xl font-bold z-30 text-red-600 tracking-wider">
           アクソロトル
+        </span> */}
+        <span className="text-2xl font-bold z-30 text-red-600 tracking-wider">
+          Axolotl Dev
         </span>
 
         {/* Hamburger Menu Button */}
